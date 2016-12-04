@@ -1,0 +1,13 @@
+@charset "utf-8";
+/* CSS Document */
+
+.receptacle {
+    width: 660px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+.atticle_title{
+	background-color:#C09;
+	position:relative;
+}
