@@ -24,7 +24,7 @@
                 <link rel='stylesheet' id='main-css-css'  href='../css/main5152.css?ver=1.0' type='text/css' media='all' />
                 <link rel='stylesheet' href='../css/article.css?' type='text/css' media='all' />
                 <link rel='stylesheet' id='custom-css-css'  href='../css/custom5152.html?ver=1.0' type='text/css' media='all' />
-
+				
 
                 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
                 <!--[if lt IE 9]>
@@ -118,10 +118,14 @@
                                                 <!-- Basic Home Page Template -->
                                                 <div class="article_content">
                                                  <%-- <%@include file="../plugin/utf8-jsp/demo.html"%>  --%>    
-                                                     <!-- 加载编辑器的容器 -->
+                                                    <form action="" method="POST"> 
+                                                                                                     
+                                                     <!-- 加载编辑器的容器 -->                                            
 												    <script id="container" name="content" type="text/plain">
         												在此输入文章正文
     												</script>
+    												
+    												</form>
 												    <!-- 配置文件 -->
 												    <script type="text/javascript" src="../plugin/utf8-jsp/ueditor.config.js"></script>
 												    <!-- 编辑器源码文件 -->
@@ -240,6 +244,9 @@
                 <script type='text/javascript' src='js/jquery.form.js'></script>
                 <script type='text/javascript' src='js/jquery.validate.min.js'></script>
                 <script type='text/javascript' src='js/custom.js'></script>
-
+                <script src="../plugin/utf8-jsp/ueditor.parse.js"></script>
+  		        uparse('.article_content',{
+		        	rootpath:'../plugin/utf8-jsp'
+		        })
         </body>
 </html>
