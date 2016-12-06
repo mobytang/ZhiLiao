@@ -477,7 +477,6 @@
             }
 
         }
-
         return protocol + res.join("/");
 
     }
