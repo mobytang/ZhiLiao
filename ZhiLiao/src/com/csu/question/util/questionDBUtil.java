@@ -1,4 +1,4 @@
-package com.csu.quesition.util;
+package com.csu.question.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
