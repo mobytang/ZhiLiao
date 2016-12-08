@@ -54,6 +54,7 @@
                                                         <ul id="menu-top-menu" class="clearfix">
                                                                 <li class="current-menu-item"><a href="index-2.html">首页</a></li>
                                                                 <li><a href="home-categories-description.html">提问</a></li>
+                                                                <li><a href="pages/writeArticle.jsp">写文章</a></li>
                                                                 <li><a href="home-categories-articles.html">我的主页</a>
                                                                         <ul class="sub-menu">
                                                                                 <li><a href="blue-skin.html">我提的问题</a></li>
