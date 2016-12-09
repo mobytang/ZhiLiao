@@ -2,14 +2,13 @@ package com.csu.bean;
 
 import java.sql.Date;
 /**
- * 
  * @author 刘巧
  * 
  */
 public class Answer {
 	private int answerId;//回答编号
 	private String answerContent;//回答内容
-	private Date answerDate;//回答时间
+	private String answerDate;//回答时间
 	//private ? answerUser;//回答者：王俊强的user POJO写出来后引用	
 	//private ? question;//问题：老司机的question POJO写出来后引用
 	private int answerSupport;//点赞数
@@ -28,10 +27,10 @@ public class Answer {
 	public void setAnswerContent(String answerContent) {
 		this.answerContent = answerContent;
 	}
-	public Date getAnswerDate() {
+	public String getAnswerDate() {
 		return answerDate;
 	}
-	public void setAnswerDate(Date answerDate) {
+	public void setAnswerDate(String answerDate) {
 		this.answerDate = answerDate;
 	}
 	public int getAnswerSupport() {
@@ -46,7 +45,7 @@ public class Answer {
 	public void setIsAnoy(int isAnoy) {
 		this.isAnoy = isAnoy;
 	}
-	public Answer(int answerId, String answerContent, Date answerDate, int answerSupport, int isAnoy) {
+	public Answer(int answerId, String answerContent, String answerDate, int answerSupport, int isAnoy) {
 		super();
 		this.answerId = answerId;
 		this.answerContent = answerContent;
