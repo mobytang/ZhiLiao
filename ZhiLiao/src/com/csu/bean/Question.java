@@ -11,6 +11,8 @@ public class Question {
 	private String questionDes;
 	private int userID;
 	private boolean qIsAno;
+	private String questionDate;
+	
 	public int getQuestionID() {
 		return questionID;
 	}
@@ -45,24 +47,33 @@ public class Question {
 	public Question() {
 		// TODO Auto-generated constructor stub
 	}
-	public Question(int questionID, String questionTitle, String questionDes, int userID, boolean qIsAno) {
+	public String getQuestionDate() {
+		return questionDate;
+	}
+	public void setQuestionDate(String questionDate) {
+		this.questionDate = questionDate;
+	}
+	public Question(int questionID, String questionTitle, String questionDes, int userID, boolean qIsAno,
+			String questionDate) {
 		super();
 		this.questionID = questionID;
 		this.questionTitle = questionTitle;
 		this.questionDes = questionDes;
 		this.userID = userID;
 		this.qIsAno = qIsAno;
+		this.questionDate = questionDate;
 	}
 	@Override
 	public String toString() {
 		return "Question [questionID=" + questionID + ", questionTitle=" + questionTitle + ", questionDes="
-				+ questionDes + ", userID=" + userID + ", qIsAno=" + qIsAno + "]";
+				+ questionDes + ", userID=" + userID + ", qIsAno=" + qIsAno + ", questionDate=" + questionDate + "]";
 	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + (qIsAno ? 1231 : 1237);
+		result = prime * result + ((questionDate == null) ? 0 : questionDate.hashCode());
 		result = prime * result + ((questionDes == null) ? 0 : questionDes.hashCode());
 		result = prime * result + questionID;
 		result = prime * result + ((questionTitle == null) ? 0 : questionTitle.hashCode());
@@ -80,6 +91,11 @@ public class Question {
 		Question other = (Question) obj;
 		if (qIsAno != other.qIsAno)
 			return false;
+		if (questionDate == null) {
+			if (other.questionDate != null)
+				return false;
+		} else if (!questionDate.equals(other.questionDate))
+			return false;
 		if (questionDes == null) {
 			if (other.questionDes != null)
 				return false;
@@ -96,6 +112,5 @@ public class Question {
 			return false;
 		return true;
 	}
-	
-	
+		
 }
