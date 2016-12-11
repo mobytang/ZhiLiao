@@ -22,7 +22,7 @@
                 <link rel='stylesheet' id='responsive-css-css'  href='../css/responsive5152.css?ver=1.0' type='text/css' media='all' />
                 <link rel='stylesheet' id='pretty-photo-css-css'  href='../js/prettyphoto/prettyPhotoaeb9.css?ver=3.1.4' type='text/css' media='all' />
                 <link rel='stylesheet' id='main-css-css'  href='../css/main5152.css?ver=1.0' type='text/css' media='all' />
-                <link rel='stylesheet' href='../css/article.css?' type='text/css' media='all' />
+                
                 <link rel='stylesheet' id='custom-css-css'  href='../css/custom5152.html?ver=1.0' type='text/css' media='all' />
 				
 
@@ -105,14 +105,12 @@
                                         <!-- start of page content -->
                                         <section class="receptacle">
                                                 <!-- start of title content -->
+                                                <!-- 取问题标题放置在textarea中 -->
                                         		<div class="atticle_title">
                                                 	<textarea class="js-textarea"  
-                                                	name="title" 
-                                                	autofocus="true" 
-                                                	word-min="2" 
-                                                	word-max="50"
-                                                	 placeholder="请输入标题" s
-                                                	 tyle="height: 47px;"></textarea>
+                                                	 name="title" 
+                                                	 disabled="disabled"   	
+                                                	 style="height: 47px;"></textarea>
                                                 </div>
                                                 <!-- end of title content -->
                         
@@ -122,11 +120,17 @@
                                                  
                                                  <form action="../AnswerServlet?method=submitAnswer" method="POST">
                                                  <textarea id="container" 
-                                                 name="container"style="height: 400px; margin: 0 auto;">
-												</textarea> 
-												<input type="submit" value="提交">
-												 </form>
-                                                
+                                                  name="container" style="height: 400px; margin: 0 auto;">
+												 </textarea> 
+												 
+												 <!-- <input type="submit" value="提交">
+												 <input type="submit" value="取草稿"> -->
+												  <div>		 
+												   <input class="" name="isAnoy" type="checkbox">匿名回答
+												   <input class="btn" name="submit" type="submit" id="submit"  value="提交回答">
+												   <input class="btn" name="submit" type="submit" id="submit"  value="取出草稿">
+												  </div>
+												 </form>                                
     												
 												    <!-- 配置文件 -->
 												    <script type="text/javascript" src="../plugin/utf8-jsp/ueditor.config.js"></script>

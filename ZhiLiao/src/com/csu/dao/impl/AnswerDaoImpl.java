@@ -41,9 +41,9 @@ public class AnswerDaoImpl implements AnswerDao{
 			ps=(PreparedStatement) connection.prepareStatement(sql);
 			ps.setString(1, answer.getAnswerContent());
 			ps.setString(2, answer.getAnswerDate());
-			ps.setInt(3, answer.getUser().getUserId());//用户编号 
+			ps.setInt(3, 1);//用户编号 
 			ps.setInt(4, answer.getAnswerSupport());
-			ps.setInt(5, answer.getQuestion().getQuestionID());//问题编号 
+			ps.setInt(5, 1);//问题编号 
 			ps.setInt(6, answer.getIsAnoy());
 			
 			result=ps.executeUpdate();
