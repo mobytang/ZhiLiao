@@ -116,7 +116,7 @@
                                                                			<img src="../images/testUs.jpg">&nbsp;&nbsp;
                                                                         <a href="single.html">用户名</a> &nbsp;&nbsp;
                                                                         我就是那个用户
-                                                                         
+                                                                   
                                                                 </h5>
                                                                
 
@@ -135,10 +135,12 @@
                                                         	 <div class="post-meta clearfix">
                                                                         <span class="date">2016-12-11</span>
                                                                         <span class="category"><a href="#" title="View all posts in Server &amp; Database">收藏</a></span>
-                                                                        <span class="comments"><a href="#" title="Comment on Integrating WordPress with Your Website">3 条评论</a></span>
+                                                                        <span class="comments"><a id="showCmt">3 条评论</a></span>
                                                                         <span class="like-count">66 </span>
                                                                 </div>
-                                                        
+                                                        		<div class="comment-list" style="display:none">
+                                                                	<p>这里放评论列表</p>
+                                                                </div>
                                                         </footer>
 
                                                 </article>
@@ -255,6 +257,7 @@
                 <script type='text/javascript' src='js/jquery.formd471.js?ver=3.18'></script>
                 <script type='text/javascript' src='js/jquery.validate.minfc6b.js?ver=1.10.0'></script>
                 <script type='text/javascript' src='js/custom5152.js?ver=1.0'></script>
+                <script type='text/javascript' src='js/answerListJs.js'></script>
 
 </body>
 </html>
