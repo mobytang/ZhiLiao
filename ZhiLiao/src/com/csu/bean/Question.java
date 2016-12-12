@@ -12,6 +12,7 @@ public class Question {
 	private int userID;
 	private boolean qIsAno;
 	private String questionDate;
+	private String questionLastUpdateDate;
 	
 	public int getQuestionID() {
 		return questionID;
@@ -43,6 +44,7 @@ public class Question {
 	public void setqIsAno(boolean qIsAno) {
 		this.qIsAno = qIsAno;
 	}
+	
 	
 	public Question() {
 		// TODO Auto-generated constructor stub
