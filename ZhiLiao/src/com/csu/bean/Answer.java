@@ -10,7 +10,9 @@ public class Answer {
 	private String answerContent;//回答内容
 	private String answerDate;//回答时间
 	//private ? answerUser;//回答者：王俊强的user POJO写出来后引用	
+	private User user;
 	//private ? question;//问题：老司机的question POJO写出来后引用
+	private Question question;
 	private int answerSupport;//点赞数
 	private int isAnoy;//是否匿名
 	
@@ -45,22 +47,25 @@ public class Answer {
 	public void setIsAnoy(int isAnoy) {
 		this.isAnoy = isAnoy;
 	}
-	public Answer(int answerId, String answerContent, String answerDate, int answerSupport, int isAnoy) {
-		super();
-		this.answerId = answerId;
-		this.answerContent = answerContent;
-		this.answerDate = answerDate;
-		this.answerSupport = answerSupport;
-		this.isAnoy = isAnoy;
+		
+	public Question getQuestion() {
+		return question;
 	}
+	public void setQuestion(Question question) {
+		this.question = question;
+	}
+		
+	public User getUser() {
+		return user;
+	}
+	public void setUser(User user) {
+		this.user = user;
+	}
+	
+	
 	
 	public Answer() {
 		// TODO Auto-generated constructor stub
-	}
-	@Override
-	public String toString() {
-		return "Answer [answerId=" + answerId + ", answerContent=" + answerContent + ", answerDate=" + answerDate
-				+ ", answerSupport=" + answerSupport + ", isAnoy=" + isAnoy + "]";
 	}
 	@Override
 	public int hashCode() {
@@ -71,6 +76,8 @@ public class Answer {
 		result = prime * result + answerId;
 		result = prime * result + answerSupport;
 		result = prime * result + isAnoy;
+		result = prime * result + ((question == null) ? 0 : question.hashCode());
+		result = prime * result + ((user == null) ? 0 : user.hashCode());
 		return result;
 	}
 	@Override
@@ -98,9 +105,23 @@ public class Answer {
 			return false;
 		if (isAnoy != other.isAnoy)
 			return false;
+		if (question == null) {
+			if (other.question != null)
+				return false;
+		} else if (!question.equals(other.question))
+			return false;
+		if (user == null) {
+			if (other.user != null)
+				return false;
+		} else if (!user.equals(other.user))
+			return false;
 		return true;
 	}
-	
-	
-
+	@Override
+	public String toString() {
+		return "Answer [answerId=" + answerId + ", answerContent=" + answerContent + ", answerDate=" + answerDate
+				+ ", user=" + user + ", question=" + question + ", answerSupport=" + answerSupport + ", isAnoy="
+				+ isAnoy + "]";
+	}
+		
 }

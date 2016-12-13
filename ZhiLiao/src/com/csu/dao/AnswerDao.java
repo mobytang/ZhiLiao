@@ -2,7 +2,6 @@
 package com.csu.dao;
 
 import java.util.List;
-
 import com.csu.bean.Answer;
 
 /**
@@ -60,7 +59,7 @@ public interface AnswerDao {
 	public List<Answer> getAnswerByQuestionId(int questionId);
 	
 	/**
-	 * 根据用户编号查找该用户的所有评论
+	 * 根据用户编号查找该用户的所有回答
 	 * @author 刘巧
 	 * @param questionId 问题的编号
 	 * @return List<Answer> 查找到的回答列表：如果为null说明无法查找

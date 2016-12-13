@@ -1414,7 +1414,8 @@ a#scroll-top:hover {
     display: inline-block;
   }
 }
-/* article section*/
+
+/* write answer section*/
 .receptacle {
     width: 660px;
     margin-left: auto;
@@ -1422,11 +1423,11 @@ a#scroll-top:hover {
     position: relative;
 }
 .atticle_title{
-	margin: 16px 0;
+ 	margin: 16px 0;
     margin-top: 16px;
     margin-right: 0px;
     margin-bottom: 16px;
-    margin-left: 0px;
+    margin-left: 0px; 
 }
 .article_content{
 	padding: 0 50% 200px;
@@ -1442,8 +1443,48 @@ a#scroll-top:hover {
 	width:645px;
 	height:47px;
 	font-size:32px; 
-	color:#333;
 	font-weight: 400;
 	vertical-align:top;
+}
+/* answers-list*/
+.question-Des{
+	position:absolute;
+	width:800px;
+	left:250px;
+}
+
+.question-Opt{
+	position:absolute;
+	left:300;
+	top:100;
+}
+
+.zg-btn-white.zu-button-more {
+    display: block;
+    font-size: 13px;
+    margin: 20px 0;
+    padding: 5px 1px;
+}
+
+.zg-btn-white {
+    color: #666 !important;
+    text-shadow: 0 1px 0 #fff;
+    background: #f1f1f2;
+    background: -webkit-linear-gradient(top,#f8f8f9,#e6e6e8);
+    background: linear-gradient(to bottom,#f8f8f9,#e6e6e8);
+    border: 1px solid #bbb;
+    box-shadow: 0 1px 0 #fff inset,0 1px 0 rgba(0,0,0,.1);
+	font-size: 14px;
+	line-height: 1.7;
+	text-decoration: none !important;
+	vertical-align: middle;
+	display: inline-block;
+	_display: inline !important;
+	text-align: center;
+	padding: 4px 10px;
+	cursor: pointer;
+	border-radius: 3px;
+	white-space: nowrap;
+	box-sizing: border-box;
 }
 

@@ -61,22 +61,33 @@ public class AnswerServlet extends HttpServlet {
 	public void submitAnswer(HttpServletRequest request, HttpServletResponse response) {
 		
 		String word_content = request.getParameter("container");
-		System.out.println("word_content"+word_content);
+		String isAnoy=request.getParameter("isAnoy");
+		//System.out.println("word_content"+word_content);
+		//System.out.println(request.getParameter("isAnoy"));
 		//假装接收参数值
 		Answer answer=new Answer();
-	    answer.setAnswerContent("这是我插入的一条回答");
+	    answer.setAnswerContent(word_content);
 	    answer.setAnswerDate(TimeUtil.getCurrentTime());
 	    answer.setAnswerSupport(0);
-	    answer.setIsAnoy(0);
-	    //调用dao 插入数据库
-	    /*boolean result=answerDao.insertAnswer(answer);
-	    //根据执行结果选择跳转
-	    if (result) {
-			//response.sendRedirect("");
+	    if (isAnoy==null) {
+	    	answer.setIsAnoy(0);
 		}
-	    else{
+	    else answer.setIsAnoy(1);
+	    //取出当前问题的回答
+	    //answer.setQuestion(question);
+	    //从session中取出当前用户
+	    //answer.setUser(user);
+	    //调用dao 插入数据库
+	    boolean result=answerDao.insertAnswer(answer);
+	    //根据执行结果选择跳转
+	    if (result) {//回答成功:跳转到 问题详情页
+			//response.sendRedirect("");
+	    	
+		}
+	    else{//回答失败 //可选择留在写回答页  或者 返回问题详情页
 	    	//response.sendRedirect("");
-	    }*/
+	    	
+	    }
 		//return null;		
 	}
 

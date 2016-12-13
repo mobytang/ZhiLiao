@@ -17,13 +17,16 @@ public class Question {
 	private String questionTitle;
 	private String questionContent;
 	private boolean qIsAno;
+
 	private Timestamp questionDate;
 	private Timestamp questionLastUpdateTime;
 	private User user;
+
 	
 	public Question() {
 		// TODO Auto-generated constructor stub
 	}
+
 	
 	public Question(int questionID, String questionTitle, String questionContent, boolean qIsAno,
 			Timestamp questionDate, Timestamp questionLastUpdateTime, User user) {
@@ -35,12 +38,14 @@ public class Question {
 		this.questionDate = questionDate;
 		this.questionLastUpdateTime = questionLastUpdateTime;
 		this.user = user;
+
 	}
 
 
 	
 	@Override
 	public String toString() {
+
 		return "Question [questionID=" + questionID + ", questionTitle=" + questionTitle + ", questionContent="
 				+ questionContent + ", qIsAno=" + qIsAno + ", questionDate=" + questionDate
 				+ ", questionLastUpdateTime=" + questionLastUpdateTime + ", user=" + user + "]";
@@ -74,6 +79,7 @@ public class Question {
 		Question other = (Question) obj;
 		if (qIsAno != other.qIsAno)
 			return false;
+
 		if (questionContent == null) {
 			if (other.questionContent != null)
 				return false;
@@ -103,6 +109,7 @@ public class Question {
 			return false;
 		return true;
 	}
+
 
 
 	public int getQuestionID() {
@@ -153,9 +160,5 @@ public class Question {
 	}
 	
 	
-	
-	
-	
-	
-	
+
 }
